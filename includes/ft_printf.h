@@ -16,6 +16,22 @@
 # include "./libft/libft.h"
 # include <stdarg.h>
 
-int	ft_printf(const char *str, ...);
+typedef	struct		s_flags
+{
+	int				already_print;
+	int				type;
+	int				width;
+	int				minus;
+	int				zero;
+	int				dot;
+	int				star;
+}					t_flags;
+
+int		ft_printf(const char *str, ...);
+int		ft_putchar(int c);
+char	*ft_str_tolower(char *str);
+int		ft_treat_char(char c, t_flags flags);
+int	ft_treat_int(int i, t_flags flags);
+int	ft_treat_width(int width, int minus, int has_zero);
 
 #endif

@@ -27,7 +27,10 @@ CFLAGS = -c -Wall -Wextra -Werror
 
 SRCS = ft_printf.c \
 		sources/ft_putchar.c \
-		sources/ft_str_tolower.c
+		sources/ft_str_tolower.c \
+		sources/ft_treat_char.c \
+		sources/ft_treat_int.c \
+		sources/ft_treat_width.c \
 
 # **************************************************************************** #
 #                                    RULES                                     #
