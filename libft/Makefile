@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 12:32:13 by ide-spir          #+#    #+#              #
-#    Updated: 2022/01/13 11:01:45 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/01/17 16:12:44 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,8 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c
-
-SRCS_BONUS = ft_lstadd_back.c \
+ft_toupper.c \
+ft_lstadd_back.c \
 ft_lstadd_front.c \
 ft_lstclear.c \
 ft_lstdelone.c \
@@ -78,8 +77,6 @@ ft_lstsize.c
 
 OBJS = ${SRCS:.c=.o}
 
-OBJS_BONUS = ${SRCS_BONUS:.c=.o}
-
 RM = rm -f
 
 HEADER = -I ./includes
@@ -91,21 +88,16 @@ $(NAME): ${OBJS}
 	@ar rc ${NAME} ${OBJS}
 	@echo "Libft.a created"
 
-bonus: ${OBJS_BONUS}
-	@ar rc $(NAME) $(OBJS_BONUS)
-	@echo "Bonus added to Libft.a"
-
 all: ${NAME}
 
 clean:
 	@${RM} ${OBJS}
+	@echo "All .o deleted"
 
 fclean: clean
 	@${RM} ${NAME} ${OBJS_BONUS}
 	@echo "Libft.a and all .o deleted"
 
 re: fclean all
-
-re_all_bonus: fclean all bonus
 
 .PHONY : all clean fclean re

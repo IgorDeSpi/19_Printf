@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_prec.c                                   :+:      :+:    :+:   */
+/*   ft_putstr_perc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ide-spir <narvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 12:23:32 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/14 12:23:32 by ide-spir         ###   ########.fr       */
+/*   Created: 2022/01/17 15:46:10 by ide-spir          #+#    #+#             */
+/*   Updated: 2022/01/17 15:46:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_putstr_prec(char *str, int prec)
+int	ft_putstr_perc(char *str, int prec)
 {
 	int	count_char;
 

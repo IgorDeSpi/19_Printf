@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 11:00:01 by ide-spir          #+#    #+#              #
-#    Updated: 2022/01/13 11:46:27 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/01/17 16:14:07 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,11 +26,15 @@ CFLAGS = -c -Wall -Wextra -Werror
 # **************************************************************************** #
 
 SRCS = ft_printf.c \
-		sources/ft_putchar.c \
-		sources/ft_str_tolower.c \
-		sources/ft_treat_char.c \
-		sources/ft_treat_int.c \
-		sources/ft_treat_width.c \
+		src/ft_putchar.c \
+		src/ft_putstr_perc.c \
+		src/ft_str_tolower.c \
+		src/ft_treat_char.c \
+		src/ft_treat_flags.c \
+		src/ft_treat_int.c \
+		src/ft_treat_percent.c \
+		src/ft_treat_string.c \
+		src/ft_treat_width.c
 
 # **************************************************************************** #
 #                                    RULES                                     #

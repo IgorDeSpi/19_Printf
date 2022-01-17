@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_treat_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ide-spir <narvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 12:00:19 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/14 12:00:19 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:45:02 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_in_put_part_int(char *dst_i, int save_i, t_flags flags)
 		ft_putchar('-');
 	if (flags.dot >= 0)
 		count_char += ft_treat_width(flags.dot - 1, ft_strlen(dst_i) - 1, 1);
-	count_char += ft_putstrprec(dst_i, ft_strlen(dst_i));
+	count_char += ft_putstr_perc(dst_i, ft_strlen(dst_i));
 	return (count_char);
 }
 
@@ -62,7 +62,7 @@ int	ft_treat_int(int i, t_flags flags)
 	if (i < 0 && (flags.dot >= 0 || flags.zero == 1))
 	{
 		if (flags.zero == 1 && flags.dot == -1)
-			ft_putstrprec('-', 1);
+			ft_putstr_perc('-', 1);
 		i *= -1;
 		flags.zero = 1;
 		flags.width--;
