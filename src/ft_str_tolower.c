@@ -6,11 +6,12 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:10:54 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/13 11:18:11 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:01:35 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 char	*ft_str_tolower(char *str)
 {

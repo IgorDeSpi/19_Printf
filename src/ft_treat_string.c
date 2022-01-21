@@ -6,11 +6,12 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:49:10 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/17 16:01:21 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:02:02 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static int	ft_put_part_int(char *str, t_flags flags)
 {

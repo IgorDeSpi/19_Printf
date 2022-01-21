@@ -6,11 +6,12 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:46:10 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/17 15:46:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:01:30 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putstr_perc(char *str, int prec)
 {

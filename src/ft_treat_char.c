@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_treat_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ide-spir <narvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 11:46:13 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/14 11:46:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:01:40 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_treat_char(char c, t_flags flags)
 {

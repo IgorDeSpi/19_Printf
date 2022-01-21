@@ -6,11 +6,12 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 12:07:23 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/17 12:17:30 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:01:48 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 t_flags	ft_flag_minus(t_flags flags)
 {
