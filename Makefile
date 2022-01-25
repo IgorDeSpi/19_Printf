@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 11:00:01 by ide-spir          #+#    #+#              #
-#    Updated: 2022/01/21 11:58:28 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/01/25 15:43:58 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,10 +44,14 @@ SRCS = ft_printf.c \
 		src/ft_str_tolower.c \
 		src/ft_treat_char.c \
 		src/ft_treat_flags.c \
+		src/ft_treat_hexa.c \
 		src/ft_treat_int.c \
 		src/ft_treat_percent.c \
+		src/ft_treat_pointer.c \
 		src/ft_treat_string.c \
-		src/ft_treat_width.c
+		src/ft_treat_width.c \
+		src/ft_treatment.c \
+		src/ft_ull_base.c
 
 # **************************************************************************** #
 #                                    RULES                                     #
