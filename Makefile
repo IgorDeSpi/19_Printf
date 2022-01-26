@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/13 11:00:01 by ide-spir          #+#    #+#              #
-#    Updated: 2022/01/25 15:43:58 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/01/26 15:21:29 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ SRCS = ft_printf.c \
 		src/ft_treat_string.c \
 		src/ft_treat_width.c \
 		src/ft_treatment.c \
-		src/ft_ull_base.c
+		src/ft_ull_base.c \
+		src/ft_u_itoa \
+		src/ft_treat_uint.c
 
 # **************************************************************************** #
 #                                    RULES                                     #
