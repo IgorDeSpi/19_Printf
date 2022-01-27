@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:03:22 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/26 15:21:12 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:35:27 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int		ft_treat_width(int width, int minus, int has_zero);
 int		ft_treatment(int c, t_flags flags, va_list args);
 int		ft_treat_hexa(unsigned int ui, int lower, t_flags flags);
 int		ft_treat_ptr(unsigned long long ull, t_flags flags);
-int		is_flag_list(int c);
-int		is_type_list(int c);
+int		ft_is_flag_list(int c);
+int		ft_is_type_list(int c);
 int		ft_treat_uint(unsigned int ui, t_flags flags);
 
 char	*ft_str_tolower(char *str);

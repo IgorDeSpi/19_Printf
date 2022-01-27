@@ -6,19 +6,19 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:13:26 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/01/25 16:43:39 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:35:14 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	is_type_list(int c)
+int	ft_is_type_list(int c)
 {
 	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') \
 	|| (c == 'i') || (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
 }
 
-int	is_flag_list(int c)
+int	ft_is_flag_list(int c)
 {
 	return ((c == '-') || (c == ' ') || (c == '0') || (c == '.') || (c == '*'));
 }
