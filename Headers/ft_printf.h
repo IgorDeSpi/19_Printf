@@ -13,19 +13,25 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "./libft/libft.h"
-# include <string.h>
-# include <unistd.h>
+# include "../libft/libft.h"
 # include <stdlib.h>
-# include <ctype.h>
 # include <stdarg.h>
+# include <stdio.h>
+
+typedef struct s_print
+{
+	va_list	args;
+	int		counter;
+}	t_print;
+
 
 int		ft_printf(const char *str, ...);
-int		ft_unsigned_int(va_list args, int *printed, int *index);
-int		ft_int_conv(va_list args, int *printed, int *index);
-int		ft_hexa_conv(va_list args, char to_conv, int *printed, int *index);
 
-void	ft_char_conv(va_list args, int *printed, int *index);
-void	ft_str_conv(va_list args, int *printed, int *index);
+void	if_char(t_print *arg_count);
+void	if_str(t_print *arg_count);
+void	if_ptr(t_print *arg_count);
+void	if_hex(t_print *arg_count, char c);
+void	if_int(t_print *arg_count);
+void	if_u_int(t_print *arg_count);
 
 #endif

@@ -3,72 +3,76 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ide-spir <narvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 14:04:37 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/11 11:35:00 by ide-spir         ###   ########.fr       */
+/*   Created: 2022/02/15 16:35:23 by ide-spir          #+#    #+#             */
+/*   Updated: 2022/02/15 16:35:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-static void	ft_no_perc(const char *str, int *index, int *printed)
+static t_print	*start(void)
 {
-	ft_putchar_fd(str[(*index)], 1);
-	(*index)++;
-	(*printed)++;
+	t_print	*arg_count;
+
+	arg_count = (t_print *)malloc(sizeof(t_print));
+	if (arg_count == NULL)
+		return (NULL);
+	arg_count->counter = 0;
+	return (arg_count);
 }
 
-static int	ft_percent(const char *str, int *index, va_list args, int *printed)
+void	print_check(const char c, t_print *arg_count)
 {
-	int	ret;
-
-	ret = 0;
-	if (str[(*index)] == 'd' || str[(*index)] == 'i')
-		ret = ft_int_conv(args, printed, index);
-	else if (str[(*index)] == 'u')
-		ret = ft_unsigned_int(args, printed, index);
-	else if (str[(*index)] == 'c')
-		ft_char_conv(args, printed, index);
-	else if (str[(*index)] == 'x' || str[(*index)] == 'X' \
-			|| str[(*index)] == 'p')
-		ret = ft_hexa_conv(args, str[(*index)], printed, index);
-	else if (str[(*index)] == 's')
-		ft_str_conv(args, printed, index);
-	else
+	if (c == 'c')
+		if_char(arg_count);
+	else if (c == 's')
+		if_str(arg_count);
+	else if (c == 'p')
+		if_ptr(arg_count);
+	else if (c == 'i' || c == 'd')
+		if_int(arg_count);
+	else if (c == 'u')
+		if_u_int(arg_count);
+	else if (c == 'x' || c == 'X')
+		if_hex(arg_count, c);
+	else if (c == '%')
 	{
-		ft_putchar_fd(str[(*index)], 1);
-		(*index)++;
-		(*printed)++;
+		ft_putchar_fd('%', 1);
+		arg_count->counter++;
 	}
-	return (ret);
+	else if (c != '\0')
+	{
+		write(1, &c, 1);
+		arg_count->counter++;
+	}
 }
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	args;
-	int		ret;
-	int		index;
-	int		printed;
+	t_print	*arg_count;
+	int		print_complete;
+	int		i;
 
-	va_start(args, str);
-	if (!str)
-		return (-1);
-	ret = 0;
-	index = 0;
-	printed = 0;
-	while (str[index] != '\0')
+	i = 0;
+	arg_count = start();
+	print_complete = 0;
+	va_start(arg_count->args, str);
+	while (str[i] != '\0')
 	{
-		if (str[index] == '%')
-		{
-			index++;
-			ret = ft_percent(str, &index, args, &printed);
-			if (ret == -1)
-				return (ret);
-		}
+		if (str[i] == '%')
+			print_check(str[++i], arg_count);
 		else
-			ft_no_perc(str, &index, &printed);
+		{
+			ft_putchar_fd(str[i], 1);
+			arg_count->counter++;
+		}
+		if (str[i] != '\0')
+			i++;
 	}
-	va_end(args);
-	return (printed);
+	print_complete = arg_count->counter;
+	va_end(arg_count->args);
+	free(arg_count);
+	return (print_complete);
 }
