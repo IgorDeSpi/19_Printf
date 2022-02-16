@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:35:23 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 10:57:58 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:11:02 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/ft_printf.h"
+#include "../header/ft_printf.h"
 
 static t_print	*start(void)
 {

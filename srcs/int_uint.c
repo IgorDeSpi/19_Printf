@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:05:37 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 11:08:41 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:11:19 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Headers/ft_printf.h"
+#include "../header/ft_printf.h"
 
 static int	nbr_len(unsigned int nbr)
 {

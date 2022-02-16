@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 14:06:05 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/11 11:07:39 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:09:36 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_print
 	va_list	args;
 	int		counter;
 }	t_print;
-
 
 int		ft_printf(const char *str, ...);
 
