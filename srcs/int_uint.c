@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:05:37 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 09:57:56 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:05:26 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,24 @@ static int	nbr_len(unsigned int nbr)
 	return (len);
 }
 
+static char	*my_itoa(unsigned int nbr)
+{
+	char	*str;
+	int		len;
+
+	len = nbr_len(nbr);
+	str = (char *)malloc(len + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	while (len > 0)
+	{
+		str[--len] = nbr % 10 + '0';
+		nbr = nbr / 10;
+	}
+	return (str);
+}
+
 void	if_int(t_print *arg_count)
 {
 	char	*str;
@@ -37,14 +55,14 @@ void	if_int(t_print *arg_count)
 	free(str);
 }
 
-void	if_uint(t_print *arg_count)
+void	if_u_int(t_print *arg_count)
 {
 	char			*str;
 	unsigned int	res;
 
 	res = va_arg(arg_count->args, unsigned int);
-	str = ft_itoa(res);
+	str = my_itoa(res);
 	ft_putstr_fd(str, 1);
-	arg_count->counter +- ft_strlen(str);
+	arg_count->counter += ft_strlen(str);
 	free(str);
 }
