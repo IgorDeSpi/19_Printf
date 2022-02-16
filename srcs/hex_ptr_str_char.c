@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:14:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 11:11:11 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:48:43 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	if_str(t_print *arg_count)
 	int		len;
 
 	str = va_arg(arg_count->args, char *);
-	if (str == NULL)
+	if (!str)
 	{
 		ft_putstr_fd("(null)", 1);
 		arg_count->counter += 6;

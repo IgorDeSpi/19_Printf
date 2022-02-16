@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:35:23 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 11:11:02 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:49:48 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static t_print	*start(void)
 	t_print	*arg_count;
 
 	arg_count = (t_print *)malloc(sizeof(t_print));
-	if (arg_count == NULL)
+	if (!arg_count)
 		return (NULL);
 	arg_count->counter = 0;
 	return (arg_count);
