@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:05:37 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/16 11:05:26 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:08:41 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	nbr_len(unsigned int nbr)
 	return (len);
 }
 
-static char	*my_itoa(unsigned int nbr)
+static char	*my_u_itoa(unsigned int nbr)
 {
 	char	*str;
 	int		len;
@@ -61,7 +61,7 @@ void	if_u_int(t_print *arg_count)
 	unsigned int	res;
 
 	res = va_arg(arg_count->args, unsigned int);
-	str = my_itoa(res);
+	str = my_u_itoa(res);
 	ft_putstr_fd(str, 1);
 	arg_count->counter += ft_strlen(str);
 	free(str);
