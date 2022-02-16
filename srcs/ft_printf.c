@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ide-spir <narvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:35:23 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/15 16:35:23 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/02/16 09:57:33 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../Headers/ft_printf.h"
 
 static t_print	*start(void)
 {
